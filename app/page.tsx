@@ -5,10 +5,12 @@ export default async function Home() {
   const data = await client.getList<Blog>({
     endpoint: "blog",
   });
-  console.log(data);
+
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <p>とぷ</p>
+      思ったことを書く
+      <hr />
       <div>
         {data.contents.map((item: Blog) => {
           return (
